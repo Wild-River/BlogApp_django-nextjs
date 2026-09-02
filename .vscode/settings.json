@@ -1,0 +1,9 @@
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  // className / class 属性内で補完候補を出す
+  "editor.quickSuggestions": {
+    "strings": "on"
+  }
+}
