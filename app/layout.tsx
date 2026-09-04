@@ -11,7 +11,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html lang="ja">
       <body className="flex min-h-screen flex-col items-center justify-center bg-gray-800 font-mono text-white">
         {" "}
-        <main className="flex w-screen flex-1 flex-col items-center justify-center">
+        <main className="flex w-full flex-1 flex-col items-center justify-center">
           {children}
         </main>
         <footer className="flex h-6 w-full items-center justify-center text-sm text-gray-500">
