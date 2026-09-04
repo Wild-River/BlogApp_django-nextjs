@@ -3,7 +3,6 @@
 import Cookie from "universal-cookie";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import Layout from "@/app/layout";
 
 const cookie = new Cookie();
 
@@ -17,13 +16,13 @@ export default function MainPage() {
     <>
       <div className="mb-10">
         <Link
-          href="/blog-page"
+          href="/blog"
           className="mr-8 rounded bg-indigo-500 px-4 py-12 text-white hover:bg-indigo-600"
         >
           Visit Blog by SSG + ISR
         </Link>
         <Link
-          href="/task-page"
+          href="/task"
           className="ml-8 rounded bg-gray-500 px-4 py-12 text-white hover:bg-gray-600"
         >
           Visit Task by ISR + CSR
