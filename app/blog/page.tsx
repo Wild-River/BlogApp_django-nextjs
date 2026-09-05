@@ -1,13 +1,22 @@
 import Link from "next/link";
 import { Metadata } from "next";
+import { getAllPostsData } from "@/lib/posts";
+import Post from "@/components/Post";
 
 export const metadata: Metadata = {
   title: "Blog Page",
 };
 
-export default function Blog() {
+export default async function Blog() {
+  const posts = await getAllPostsData();
+
   return (
     <>
+      <ul>
+        {posts.map((post) => (
+          <Post key={post.id} post={post} />
+        ))}
+      </ul>
       <Link href="/main">
         <div className="mt-12 flex cursor-pointer">
           <svg
