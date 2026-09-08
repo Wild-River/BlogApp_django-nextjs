@@ -61,7 +61,7 @@ export default function TaskForm({ taskCreated }: { taskCreated: () => void }) {
     <div>
       <form onSubmit={selectedTask.id !== 0 ? update : create}>
         <input
-          className="mb-8 px-2 py-1 text-black"
+          className="mb-8 rounded-md bg-white px-3 py-1 text-black outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
           type="text"
           value={selectedTask.title}
           onChange={(e) =>

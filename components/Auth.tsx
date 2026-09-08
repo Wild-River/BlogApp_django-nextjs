@@ -72,10 +72,7 @@ export default function Auth() {
         <div className="mt-10">
           <form onSubmit={authUser} className="space-y-6">
             <div>
-              <label
-                htmlFor="username"
-                className="block text-sm/6 font-medium text-gray-900"
-              >
+              <label htmlFor="username" className="block text-sm/6 font-medium">
                 Email address
               </label>
               <div className="mt-2">
@@ -96,7 +93,7 @@ export default function Auth() {
               <div className="flex items-center justify-between">
                 <label
                   htmlFor="password"
-                  className="block text-sm/6 font-medium text-gray-900"
+                  className="block text-sm/6 font-medium"
                 >
                   Password
                 </label>

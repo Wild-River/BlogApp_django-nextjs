@@ -21,7 +21,7 @@ export default function RootLayout({
         <main className="flex w-full flex-1 flex-col items-center justify-center">
           {children}
         </main>
-        <footer className="flex h-6 w-full items-center justify-center text-sm text-gray-500">
+        <footer className="flex h-6 w-full items-center justify-center text-sm text-gray-400">
           @Udemy 2021
         </footer>
       </body>
