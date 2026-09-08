@@ -1,32 +1,15 @@
-import Link from "next/link";
+import { getAllTasksData } from "@/lib/tasks";
+
 import { Metadata } from "next";
+import TaskList from "@/components/TaskList";
+
+export const revalidate = 3;
 
 export const metadata: Metadata = {
   title: "Task Page",
 };
 
-export default function Task() {
-  return (
-    <>
-      <Link href="/main">
-        <div className="mt-12 flex cursor-pointer">
-          <svg
-            className="mr-3 h-6 w-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M11 19l-7-7 7-7m8 14l-7-7 7-7"
-            />
-          </svg>
-          <span>Back to main page</span>
-        </div>
-      </Link>
-    </>
-  );
+export default async function TaskPage() {
+  const tasks = await getAllTasksData();
+  return <TaskList initialTasks={tasks} />;
 }

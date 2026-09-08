@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { FormEvent, useState } from "react";
+import { useState, SubmitEvent } from "react";
 import Cookies from "universal-cookie";
 
 const cookies = new Cookies();
@@ -43,7 +43,7 @@ export default function Auth() {
     if (!res.ok) throw new Error("registration failed");
   };
 
-  const authUser = async (e: FormEvent<HTMLFormElement>) => {
+  const authUser = async (e: SubmitEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
       if (!isLogin) await register();

@@ -8,7 +8,7 @@ export type Post = {
 
 export async function getAllPostsData(): Promise<Post[]> {
   const res = await fetch(
-    new URL(`${process.env.NEXT_PUBLIC_RESTAPI_URL}/api/list-post/`),
+    `${process.env.NEXT_PUBLIC_RESTAPI_URL}/api/list-post/`,
     { next: { revalidate: 3 } },
   );
   const posts: Post[] = await res.json();
@@ -30,7 +30,7 @@ export async function getAllPostIds(): Promise<{ id: string }[]> {
 
 export async function getPostData(id: number): Promise<Post | null> {
   const res = await fetch(
-    new URL(`${process.env.NEXT_PUBLIC_RESTAPI_URL}/api/detail-post/${id}/`),
+    `${process.env.NEXT_PUBLIC_RESTAPI_URL}/api/detail-post/${id}/`,
     { next: { revalidate: 3 } },
   );
 
